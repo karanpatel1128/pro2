@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>string method loop and predefined funtion</h1>
+    <input type="text" id="stringId" class="string-id" placeholder="enter any character">
+    <input type="button" value="click here" onclick="mainString();">
+    <p id="mainPara"></p>
+</body>
+</html>
+<script>
+function mainString() {
+    let x=document.getElementById("stringId").value;
+    let y=x.split(" ");
+    let output="";
+    console.log(y);
+    for(let a=0; a<y.length; a++){
+     output=output+y[a].charAt(0).toUpperCase()+y[a].slice(1);
+     output=output+" ";
+    }
+   document.getElementById("mainPara").innerHTML=output;
+   console.log(output);
+}
+
+
+
+
+</script>

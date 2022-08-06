@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>date method</h1>
+    <input type="button" value="Timer 30" onclick="secondMain();">
+    <p style="border:blueviolet; font-size: 100px;border-radius: 30px; background-color: chartreuse;width: 100px;" id="mainPara">30</p>  
+    <p style="font-size: 50px; background-color: aqua;width: 50px;" id="subPara">60</p>  
+    <p style="font-size: 25px;background-color:red;width: 50px;" id="lastPara">120</p>  
+
+</body>
+</html>
+<script>
+
+function secondMain() {
+    let time = setInterval(function(){
+      let timecount = document.getElementById("mainPara").innerHTML;
+      timecount--;
+      
+      if(timecount<=0){
+        clearInterval(time);
+        subMain();
+      }
+      document.getElementById("mainPara").innerHTML=timecount;
+    },1000); 
+      
+}
+
+function subMain() {
+    let time = setInterval(function(){
+      let timecount = document.getElementById("subPara").innerHTML;
+      timecount--;
+      
+      if(timecount<=0){
+        clearInterval(time);
+        lastMain();
+      }
+      document.getElementById("subPara").innerHTML=timecount;
+    },1000); 
+      
+}
+
+function lastMain() {
+    let time = setInterval(function(){
+      let timecount = document.getElementById("lastPara").innerHTML;
+      timecount--;
+      
+      if(timecount<=0){
+        clearInterval(time);
+        
+      }
+      document.getElementById("lastPara").innerHTML=timecount;
+    },1000); 
+      
+}
+</script>
