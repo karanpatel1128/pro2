@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>date 2</h1>
+    <input type="button" value="Timer min" id="mainButton" onclick="secondMain();">
+    <p id="mainPara">120</p>
+    
+    <input type="button" value="seconds timer" onclick="subMain();">
+    <p id="subPara">30</p>
+    
+</body>
+</html>
+<script>
+function secondMain() {
+    
+    let time = setInterval(function(){
+    let count = document.getElementById("mainPara").innerHTML
+    count--
+    count--;
+    if(count<=0){
+    clearInterval(time);
+    }
+    document.getElementById("mainPara").innerHTML=count;
+    },1000);
+    document.getElementById("mainButton").disabled = true;
+
+}
+ 
+function subMain() {
+    let x =setInterval(function()  {
+    let y = document.getElementById("subPara").innerHTML;
+    y--; 
+    document.getElementById("subPara").innerHTML=y; 
+    if(y<=0){
+    clearInterval(x);
+    }  
+    }, 1000);
+}
+
+</script>
